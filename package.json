@@ -10,7 +10,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@google/generative-ai": "^0.24.0",
     "@hookform/resolvers": "^5.0.1",
+    "axios": "^1.8.4",
     "motion": "^12.7.4",
     "motion-react": "^0.15.0-alpha.1",
     "react": "^19.0.0",
