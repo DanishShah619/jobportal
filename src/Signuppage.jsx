@@ -2,6 +2,7 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { useNavigate } from "react-router-dom";
 
 const SignupSchema = z
   .object({
@@ -23,10 +24,12 @@ export default function SignupPage() {
   } = useForm({
     resolver: zodResolver(SignupSchema),
   });
-
+const navigate = useNavigate();
   const onSubmit = (data) => {
     console.log("Form Data:", data);
-    // Add your signup logic here (API call etc.)
+    // Here you can handle the form submission, e.g., send data to your server
+    // After successful signup, navigate to the desired page
+    navigate("/form"); // Redirect to the form page after signup
   };
 
   return (
